@@ -1,14 +1,6 @@
 <div align="center">
 
-<img src="media/banner.png" alt="REAGENT Crew" width="420">
-
-<br/>
-
-<img src="media/agent.png" alt="REAGENT mascot" width="120">
-&nbsp;&nbsp;
-<img src="media/mascot.png" alt="REAGENT Crew mascot" width="120">
-&nbsp;&nbsp;
-<img src="media/grokbot-avatar.png" alt="Grok Bot avatar" width="120">
+<img src="media/banner.png" alt="REAGENT Crew" width="100%">
 
 ### An open-source kit to recreate the eight-bot Solana research desk
 
@@ -137,10 +129,7 @@ Reagent-Crew/
 ├── README.md
 ├── LICENSE
 ├── media/
-│   ├── banner.png           # wordmark
-│   ├── agent.png            # site mascot
-│   ├── mascot.png           # crew mascot
-│   └── grokbot-avatar.png   # Grok Bot avatar from the site
+│   └── banner.png           # hero banner
 ├── crew/
 │   ├── agents/              # paste-ready agent descriptions
 │   │   ├── crucible.md      #   lead + full Field sheet template
@@ -177,8 +166,6 @@ Reagent-Crew/
 
 <div align="center">
 <br/>
-<img src="media/banner.png" alt="REAGENT Crew" width="280">
-<br/><br/>
 <sub>Research, not financial advice. The desk reads data and never connects a wallet, signs, or sends a transaction.</sub>
 <br/><br/>
 <a href="https://www.reagents.tech/">reagents.tech</a> · <a href="https://x.com/reagent_rwa">@reagent_rwa</a>
