@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/banner.png" alt="Reagent Crew: eight agents, one Field sheet" width="100%">
+
 # Reagent Crew
 
 ### An open-source kit to recreate the eight-bot Solana research desk
