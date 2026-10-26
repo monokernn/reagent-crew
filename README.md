@@ -1,8 +1,16 @@
 <div align="center">
 
-# ⚗️ REAGENT Crew
+<img src="media/banner.png" alt="REAGENT Crew" width="420">
 
-### An open-source kit to recreate the eight-bot Solana research desk.
+<br/>
+
+<img src="media/agent.png" alt="REAGENT mascot" width="120">
+&nbsp;&nbsp;
+<img src="media/mascot.png" alt="REAGENT Crew mascot" width="120">
+&nbsp;&nbsp;
+<img src="media/grokbot-avatar.png" alt="Grok Bot avatar" width="120">
+
+### An open-source kit to recreate the eight-bot Solana research desk
 
 Drop a mint and get back **one Field sheet** built from evidence, with no guessed grades.
 
@@ -14,19 +22,19 @@ Drop a mint and get back **one Field sheet** built from evidence, with no guesse
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 [![Solana](https://img.shields.io/badge/chain-Solana-9945FF?style=flat-square&logo=solana&logoColor=white)](https://solana.com)
-[![Grok Bot](https://img.shields.io/badge/Grok%20Bot-multi--agent-111111?style=flat-square)](#-the-crew)
+[![Grok Bot](https://img.shields.io/badge/Grok%20Bot-multi--agent-111111?style=flat-square)](#the-crew)
 [![Agents](https://img.shields.io/badge/agents-8-orange?style=flat-square)](crew/agents)
 [![Sheets](https://img.shields.io/badge/sheets-English-blue?style=flat-square)](crew/room/field-sheet.md)
 
 <br/>
 
-**[🌐 reagents.tech](https://www.reagents.tech/)** · **[𝕏 @reagent_rwa](https://x.com/reagent_rwa)** · **[⚙️ assayer CLI](https://github.com/monokernn/REAGENT)**
+**[reagents.tech](https://www.reagents.tech/)** · **[@reagent_rwa](https://x.com/reagent_rwa)** · **[assayer CLI](https://github.com/monokernn/REAGENT)**
 
 </div>
 
 ---
 
-## 🧪 What this is
+## What this is
 
 **REAGENT** is a Solana research desk. Instead of one chatbot guessing, it runs as a **crew of eight agents**. Each specialist answers **one question**, and a lead named **Crucible** combines their answers into a single **Field sheet**.
 
@@ -36,30 +44,30 @@ This repo is the **Crew layer**: paste-ready agent prompts, the room protocol, t
 > In production, evidence comes from the REAGENT chain reader, **[assayer](https://github.com/monokernn/REAGENT)** (CLI + MCP). This kit ships the **prompts, protocol, and templates**, so you get the same desk behavior even if you wire up your own collectors. Match the shape in [`pack-sample.json`](crew/examples/pack-sample.json) and you're set.
 
 ```
-  Assay <mint>  ──▶  ONE evidence pack  ──▶  Crucible posts the Field sheet  ──▶  6 crew notes
-                     (scripts, not LLMs)      (immediately, fail-closed)          (one each, same mint)
+  Assay <mint>  -->  ONE evidence pack  -->  Crucible posts the Field sheet  -->  6 crew notes
+                     (scripts, not LLMs)     (immediately, fail-closed)           (one each, same mint)
 ```
 
 ---
 
-## 👥 The crew
+## The crew
 
-| | Agent | Beat | The one question it answers |
-|:-:|:--|:--|:--|
-| 🔥 | **[Crucible](crew/agents/crucible.md)** · *lead* | The whole picture | Collects the pack and posts the Field sheet |
-| 🪨 | **[Slate](crew/agents/slate.md)** | Identity & origin | Is this a real deployed token on this chain, and what does it call itself? |
-| 🔒 | **[Clasp](crew/agents/clasp.md)** | Contract powers | What does the token still permit somebody to do to your balance? |
-| 💧 | **[Gauge](crew/agents/gauge.md)** | Liquidity & exits | How deep is the exit, and where? |
-| ⚖️ | **[Tare](crew/agents/tare.md)** | Supply & burn | Where did supply go, and what is unreachable? |
-| 🧮 | **[Sift](crew/agents/sift.md)** | Holders & control | How concentrated is ordinary holder control? |
-| 📈 | **[Pulse](crew/agents/pulse.md)** | Trading activity | What is actually trading, and in which named pool? |
-| 📜 | **[Docket](crew/agents/docket.md)** | Documents & RWA | What do the docs and RWA claims actually say, tied to evidence? |
+| Agent | Beat | The one question it answers |
+|:--|:--|:--|
+| **[Crucible](crew/agents/crucible.md)** · *lead* | The whole picture | Collects the pack and posts the Field sheet |
+| **[Slate](crew/agents/slate.md)** | Identity & origin | Is this a real deployed token on this chain, and what does it call itself? |
+| **[Clasp](crew/agents/clasp.md)** | Contract powers | What does the token still permit somebody to do to your balance? |
+| **[Gauge](crew/agents/gauge.md)** | Liquidity & exits | How deep is the exit, and where? |
+| **[Tare](crew/agents/tare.md)** | Supply & burn | Where did supply go, and what is unreachable? |
+| **[Sift](crew/agents/sift.md)** | Holders & control | How concentrated is ordinary holder control? |
+| **[Pulse](crew/agents/pulse.md)** | Trading activity | What is actually trading, and in which named pool? |
+| **[Docket](crew/agents/docket.md)** | Documents & RWA | What do the docs and RWA claims actually say, tied to evidence? |
 
 Specialists **never fetch chain data, never talk to each other, and never invent facts**. A gap counts as a result.
 
 ---
 
-## 🚀 Quick start
+## Quick start
 
 ```bash
 git clone https://github.com/<you>/Reagent-Crew.git
@@ -80,7 +88,7 @@ Crucible posts the Field sheet right away, and the crew adds one note each. The 
 
 ---
 
-## 📋 Field sheet
+## Field sheet
 
 Every Assay ends in **one markdown sheet**: a headline, the main catch, a letter grade from real risk points, risk bands with unicode bars, and six crew lines.
 
@@ -102,13 +110,13 @@ Every Assay ends in **one markdown sheet**: a headline, the main catch, a letter
 
 </details>
 
-- 📐 Template: [`crew/room/field-sheet.md`](crew/room/field-sheet.md)
-- 🧾 Real example: [`crew/examples/field-sheet-example.md`](crew/examples/field-sheet-example.md)
-- 📦 Evidence behind it: [`crew/examples/pack-sample.json`](crew/examples/pack-sample.json)
+- Template: [`crew/room/field-sheet.md`](crew/room/field-sheet.md)
+- Real example: [`crew/examples/field-sheet-example.md`](crew/examples/field-sheet-example.md)
+- Evidence behind it: [`crew/examples/pack-sample.json`](crew/examples/pack-sample.json)
 
 ---
 
-## 🧭 Protocol
+## Protocol
 
 The rules every agent follows ([full doc](crew/room/protocol.md)):
 
@@ -122,48 +130,55 @@ The rules every agent follows ([full doc](crew/room/protocol.md)):
 
 ---
 
-## 🗂️ Folder map
+## Folder map
 
 ```
 Reagent-Crew/
 ├── README.md
 ├── LICENSE
+├── media/
+│   ├── banner.png           # wordmark
+│   ├── agent.png            # site mascot
+│   ├── mascot.png           # crew mascot
+│   └── grokbot-avatar.png   # Grok Bot avatar from the site
 ├── crew/
-│   ├── agents/                  # paste-ready agent descriptions
-│   │   ├── crucible.md          #   lead + full Field sheet template
+│   ├── agents/              # paste-ready agent descriptions
+│   │   ├── crucible.md      #   lead + full Field sheet template
 │   │   ├── slate.md  clasp.md  gauge.md  tare.md
 │   │   ├── sift.md   pulse.md  docket.md
 │   ├── room/
-│   │   ├── protocol.md          # how an Assay runs
-│   │   └── field-sheet.md       # the exact sheet template
+│   │   ├── protocol.md      # how an Assay runs
+│   │   └── field-sheet.md   # the exact sheet template
 │   └── examples/
 │       ├── field-sheet-example.md   # real $USELESS sheet
 │       └── pack-sample.json         # sanitized evidence pack
 └── scripts/
-    └── spawn-checklist.md       # rebuild the desk step by step
+    └── spawn-checklist.md   # rebuild the desk step by step
 ```
 
 ---
 
-## 🔗 Related
+## Related
 
 | | |
 |:--|:--|
-| 🌐 **Website** | [reagents.tech](https://www.reagents.tech/): live Field sheets |
-| 𝕏 **Updates** | [@reagent_rwa](https://x.com/reagent_rwa) |
-| ⚙️ **Chain reader** | [monokernn/REAGENT](https://github.com/monokernn/REAGENT): `assayer` CLI + MCP that collects and rates the evidence pack |
-| 👤 **Built by** | [@monokern](https://x.com/monokern) |
+| **Website** | [reagents.tech](https://www.reagents.tech/) — live Field sheets |
+| **Updates** | [@reagent_rwa](https://x.com/reagent_rwa) |
+| **Chain reader** | [monokernn/REAGENT](https://github.com/monokernn/REAGENT) — `assayer` CLI + MCP that collects and rates the evidence pack |
+| **Built by** | [@monokern](https://x.com/monokern) |
 
 **This repo is the Crew. assayer is the chain reader.** Use both to run the full desk.
 
 ---
 
-## 📄 License
+## License
 
 [MIT](LICENSE) © 2026 monokern / REAGENT
 
 <div align="center">
 <br/>
+<img src="media/banner.png" alt="REAGENT Crew" width="280">
+<br/><br/>
 <sub>Research, not financial advice. The desk reads data and never connects a wallet, signs, or sends a transaction.</sub>
 <br/><br/>
 <a href="https://www.reagents.tech/">reagents.tech</a> · <a href="https://x.com/reagent_rwa">@reagent_rwa</a>
