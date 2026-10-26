@@ -1,0 +1,263 @@
+{
+  "_note": "Sanitized, shortened REAGENT evidence pack for $USELESS (USELESS COIN), mint Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk, collected 2026-10-25 13:36 UTC. Some contract slots and holder exclusions are trimmed, and source URLs and the RPC endpoint are removed. It contains no keys or secrets. The shape matches what assayer writes.",
+  "evidence": {
+    "chain": {
+      "id": "solana",
+      "chain_id": null,
+      "label": "Solana",
+      "explorer": "https://solscan.io"
+    },
+    "address": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+    "collected_at": 1792935361,
+    "contract": {
+      "block": 461276465,
+      "chain_id": null,
+      "facts": {
+        "profile": "coin",
+        "chain": "solana",
+        "program": "spl-token",
+        "program_id": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+        "total_supply": "999078172249971",
+        "decimals": 6,
+        "extensions": [],
+        "name": "USELESS COIN",
+        "symbol": "USELESS",
+        "ownership": {
+          "authorities": {},
+          "owner": null,
+          "renounced": true
+        },
+        "trading_switch": null,
+        "transfer_tax": null,
+        "owner_holdings": null,
+        "burned_supply": {
+          "amount": "2193165",
+          "share_pct": 0.0
+        },
+        "liquidity": null
+      },
+      "slots": [
+        {
+          "slot": "ownership",
+          "state": "filled",
+          "value": "every authority over this mint is set to none: no key can change it",
+          "evidence": {
+            "kind": "onchain",
+            "chain_id": null,
+            "address": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+            "method": "getAccountInfo(mint)",
+            "block": 461276465,
+            "raw": "authorities: none"
+          }
+        },
+        {
+          "slot": "mint_authority",
+          "state": "not_found",
+          "value": "mint authority is set to none: the supply is fixed",
+          "evidence": {
+            "kind": "onchain",
+            "chain_id": null,
+            "address": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+            "method": "getAccountInfo(mint).mintAuthority",
+            "block": 461276465,
+            "raw": null
+          }
+        },
+        {
+          "slot": "freeze",
+          "state": "not_found",
+          "value": "freeze authority is set to none: no holder's account can be frozen",
+          "evidence": {
+            "kind": "onchain",
+            "chain_id": null,
+            "address": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+            "method": "getAccountInfo(mint).freezeAuthority",
+            "block": 461276465,
+            "raw": null
+          }
+        },
+        {
+          "slot": "upgradeable",
+          "state": "not_found",
+          "value": "the token runs on the standard spl-token program with no transfer hook",
+          "evidence": {
+            "kind": "absence",
+            "checked_selectors": [
+              "transferHook"
+            ],
+            "address": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+            "block": 461276465
+          }
+        },
+        {
+          "slot": "transfer_tax",
+          "state": "not_found",
+          "value": "no transfer fee extension: a transfer moves what it says it moves",
+          "evidence": {
+            "kind": "absence",
+            "checked_selectors": [
+              "transferFeeConfig"
+            ],
+            "address": "Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk",
+            "block": 461276465
+          }
+        },
+        {
+          "slot": "burned_supply",
+          "state": "filled",
+          "value": "0.0% of supply sits at the incinerator 1nc1nerator11111111111111111111111111111111; burns on Solana also leave the supply figure itself",
+          "evidence": {
+            "kind": "onchain",
+            "chain_id": null,
+            "address": "1nc1nerator11111111111111111111111111111111",
+            "method": "getTokenAccountsByOwner",
+            "block": 461276465,
+            "raw": "2193165"
+          }
+        },
+        {
+          "slot": "liquidity",
+          "state": "not_checked",
+          "reason": "no_pool_declared",
+          "note": "no pool in the asset file; pools are never discovered"
+        }
+      ],
+      "errors": []
+    },
+    "market": {
+      "available": true,
+      "pair_address": "Q2sPHPdUWFMg7M7wwrQKLrn619cAucfRsmhVJffodSp",
+      "dex": "raydium",
+      "labels": [
+        "CPMM"
+      ],
+      "url": "https://dexscreener.com/solana/q2sphpduwfmg7m7wwrqklrn619caucfrsmhvjffodsp",
+      "base": "USELESS",
+      "quote": "SOL",
+      "price_usd": "0.1716",
+      "liquidity_usd": 4202446.2,
+      "fdv": 171609634,
+      "market_cap": 171609634,
+      "volume_24h": 1508968.65,
+      "buys_24h": 4970,
+      "sells_24h": 3419,
+      "price_change_24h": 9.68,
+      "pair_created_at": 1746886996000,
+      "pool_count": 30
+    },
+    "holders": {
+      "available": true,
+      "holder_count": 234119,
+      "sample_size": 100,
+      "counted_in_sample": 92,
+      "top10_ordinary_share_pct": 36.48,
+      "largest_ordinary_pct": 8.96,
+      "burnt_in_sample_pct": 0,
+      "pooled_in_sample_pct": 2.38,
+      "locked_in_sample_pct": 5.35,
+      "excluded": [
+        {
+          "address": "6BhBoBB47wSGjK5uzcGWNcTf2oNRPQNuv6GVdkNyj9PB",
+          "kind": "locked",
+          "share_pct": 1.6936
+        },
+        {
+          "address": "AGVhmrhDi3RKLu9nxnRqp3CUpaG3SVeYXWkWcygHAk8N",
+          "kind": "locked",
+          "share_pct": 1.387
+        },
+        {
+          "address": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
+          "kind": "pool",
+          "share_pct": 1.2702
+        }
+      ],
+      "top10_raw_share_pct": 36.59,
+      "creator": "ArfVe1K5gt5zsxzRCWSQeWc1rJSJjZzuuYxmvRh71mMQ"
+    },
+    "provider": {
+      "available": true,
+      "provider": "rugcheck",
+      "checks": {},
+      "risks": [],
+      "score_normalised": 1,
+      "rugged": false,
+      "lp_locked_pct": 100.0,
+      "launchpad": null,
+      "creator_address": "ArfVe1K5gt5zsxzRCWSQeWc1rJSJjZzuuYxmvRh71mMQ",
+      "token_name": "USELESS COIN",
+      "token_symbol": "USELESS",
+      "flagged": [],
+      "not_checked": []
+    },
+    "collect_seconds": 4.0,
+    "sources": [
+      {
+        "source": "rpc",
+        "ok": true,
+        "collected_at": 1792935365,
+        "seconds": 0.0
+      },
+      {
+        "source": "dexscreener",
+        "ok": true,
+        "collected_at": 1792935362,
+        "seconds": 0.15
+      },
+      {
+        "source": "jupiter",
+        "ok": true,
+        "collected_at": 1792935362,
+        "seconds": 0.51
+      },
+      {
+        "source": "rugcheck",
+        "ok": true,
+        "collected_at": 1792935362,
+        "seconds": 1.0
+      }
+    ]
+  },
+  "rating": {
+    "band": "B",
+    "withheld": false,
+    "points": 18,
+    "out_of": 100,
+    "coverage_pct": 100,
+    "missing": [],
+    "factors": [
+      {
+        "key": "powers",
+        "label": "Token powers",
+        "points": 0,
+        "max_points": 36,
+        "reading": "no power over somebody else's balance was found",
+        "scored": true
+      },
+      {
+        "key": "holders",
+        "label": "Holder concentration",
+        "points": 18,
+        "max_points": 26,
+        "reading": "the largest holders in the returned sample hold 36.48% of supply — set aside from this figure: 2.38% in pools and 5.35% in lockers and program vaults, which nobody can decide to sell",
+        "scored": true
+      },
+      {
+        "key": "liquidity",
+        "label": "Liquidity & exit room",
+        "points": 0,
+        "max_points": 20,
+        "reading": "the deepest pool returned holds $4,202,446",
+        "scored": true
+      },
+      {
+        "key": "provider",
+        "label": "Provider-reported checks",
+        "points": 0,
+        "max_points": 18,
+        "reading": "the provider raised none of its checks",
+        "scored": true
+      }
+    ]
+  }
+}
