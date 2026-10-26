@@ -4,6 +4,7 @@
 
 # Reagent Crew
 <img src="assets/banner.png" alt="Reagent Crew: eight agents, one Field sheet" width="100%">
+
 ### An open-source kit to recreate the eight-bot Solana research desk
 
 Drop a mint and get back **one Field sheet** built from evidence, with no guessed grades.
