@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="media/banner.png" alt="REAGENT Crew" width="100%">
+# Reagent Crew
 
 ### An open-source kit to recreate the eight-bot Solana research desk
 
@@ -128,8 +128,6 @@ The rules every agent follows ([full doc](crew/room/protocol.md)):
 Reagent-Crew/
 ├── README.md
 ├── LICENSE
-├── media/
-│   └── banner.png           # hero banner
 ├── crew/
 │   ├── agents/              # paste-ready agent descriptions
 │   │   ├── crucible.md      #   lead + full Field sheet template
